@@ -9,6 +9,7 @@ import { verify } from "../middlewares/verify.ts";
 
 const listRouter = new Hono();
 
+// list routes
 listRouter.use(verify);
 listRouter.get("/get", getLists);
 listRouter.post("/create", createList);
