@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd zenplan-frontend && npm run build",
-  "outputDirectory": "zenplan-frontend/dist",
-  "installCommand": "cd zenplan-frontend && npm install"
-}
