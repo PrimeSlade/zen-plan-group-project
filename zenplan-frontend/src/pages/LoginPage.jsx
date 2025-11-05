@@ -84,7 +84,7 @@ const LoginPage = () => {
           )}
 
           <Button
-            className="text-base bg-[var(--color-primary)] w-full cursor-pointer hover:bg-[var(--color-secondary)]"
+            className="text-base bg-[var(--color-secondary)] w-full cursor-pointer hover:bg-[var(--color-primary)]"
             variant="default"
           >
             Sign In

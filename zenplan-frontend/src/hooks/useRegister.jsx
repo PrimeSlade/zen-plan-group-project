@@ -15,9 +15,9 @@ const useRegister = () => {
         { headers: { "Content-Type": "application/json" } }
       );
 
-      setTimeout(() => {
+      if (data.msg) {
         navigate("/login");
-      }, 5000);
+      }
     } catch (error) {
       console.log(error);
       setRegisterError(error.response.data.msg);

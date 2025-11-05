@@ -246,7 +246,9 @@ const ActivityModel = ({ mode, setOpen, oldForm }) => {
           <Button
             type="submit"
             variant="primary"
-            className={"bg-[var(--color-primary)] text-white hover:text-black"}
+            className={
+              "bg-[var(--color-secondary)] text-white hover:bg-[var(--color-primary)]"
+            }
           >
             {mode === "edit" ? "Update" : "Add"} Activity
           </Button>

@@ -16,8 +16,6 @@ const ActivityBox = ({ mode, text, oldForm }) => {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      {/* TODO: need to fix this */}
-
       {mode === "edit" ? (
         <Button
           onClick={() => setOpen(true)}

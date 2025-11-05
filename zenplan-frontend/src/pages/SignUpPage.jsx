@@ -11,6 +11,7 @@ import useRegister from "@/hooks/useRegister";
 
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const { registerUser, registerError, setRegisterError } = useRegister();
 
   const signupSchema = z.object({
@@ -100,11 +101,11 @@ const SignUpPage = () => {
           <FormInput
             label={"Confirm Password"}
             icon={<Lock size={18} />}
-            type={showPassword ? "text" : "password"}
+            type={showConfirmPassword ? "text" : "password"}
             placeholder={"Re-enter your password"}
-            toggleIcon={showPassword ? faEye : faEyeSlash}
+            toggleIcon={showConfirmPassword ? faEye : faEyeSlash}
             onToggle={() => {
-              setShowPassword(!showPassword);
+              setShowConfirmPassword(!showConfirmPassword);
             }}
             {...register("confirmPassword")}
           />
@@ -120,7 +121,7 @@ const SignUpPage = () => {
             </p>
           )}
           <Button
-            className="text-base bg-[var(--color-primary)] w-full cursor-pointer hover:bg-[var(--color-secondary)] mt-2"
+            className="text-base bg-[var(--color-secondary)] w-full cursor-pointer hover:bg-[var(--color-primary)] mt-2"
             variant="default"
           >
             Create Account
